@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Change your app title here | تغيير عنوان التطبيق هنا -->
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add favicon link here | إضافة أيقونة الموقع هنا -->
+    <!-- <link rel="icon" href="your-logo.png"> -->
+</head>
+<body>
+    <!-- MAIN LOGIN CARD | كارت تسجيل الدخول الرئيسي -->
+    <div class="login-container" id="loginContainer">
+        <!-- Change login title here | تغيير عنوان تسجيل الدخول هنا -->
+        <h1>Login</h1>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <!-- Change email label here | تغيير نص حقل الإيميل هنا -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <p class="error-message" id="emailError" style="display: none;">Please enter a valid email address</p>
+            </div>
+            
+            <div class="input-group">
+                <!-- Change password label here | تغيير نص حقل كلمة السر هنا -->
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password">●</button>
+                </div>
+                <p class="error-message" id="passwordError" style="display: none;">Password must be at least 6 characters long and contain both letters and numbers</p>
+            </div>
+            
+            <!-- Change login button text here | تغيير نص زر الدخول هنا -->
+            <button type="submit" class="submit-btn">Login</button>
+            <!-- Change register link text here | تغيير نص رابط التسجيل هنا -->
+            <p class="register-link">Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </form>
+    </div>
+
+    <!-- REGISTER CARD | كارت إنشاء الحساب -->
+    <div class="register-container" id="registerContainer">
+        <!-- Change register title here | تغيير عنوان إنشاء الحساب هنا -->
+        <h1>Register</h1>
+        
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="reg-email">Email:</label>
+                <input type="email" id="reg-email" name="reg-email" placeholder="Enter your email" required>
+                <p class="error-message" id="regEmailError" style="display: none;">Please enter a valid email address</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="reg-password">Password:</label>
+                <div class="password-container">
+                    <input type="password" id="reg-password" name="reg-password" placeholder="Enter password (at least 6 characters)" required>
+                    <button type="button" class="toggle-password">●</button>
+                </div>
+                <p class="error-message" id="regPasswordError" style="display: none;">Password must be at least 6 characters long and contain both letters and numbers</p>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                    <button type="button" class="toggle-password">●</button>
+                </div>
+                <p class="error-message" id="confirmPasswordError" style="display: none;">Passwords don't match</p>
+            </div>
+            
+            <!-- Change register button text here | تغيير نص زر التسجيل هنا -->
+            <button type="submit" class="submit-btn">Register</button>
+            <!-- Change login link text here | تغيير نص رابط الدخول هنا -->
+            <p class="register-link">Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* 
+HOW TO CUSTOMIZE APPEARANCE | كيفية تخصيص المظهر:
+1. Page Background Color | لون خلفية الصفحة: change #568193 in body
+2. Card Background Color | لون خلفية الكارت: change #0E4C65 in .login-container/.register-container
+3. Button Color | لون الأزرار: change #4CAF50 in .submit-btn
+4. Button Hover Color | لون الأزرار عند التحويم: change #45a049 in .submit-btn:hover
+5. Text Color | لون النصوص: change white in .login-container/.register-container
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* Change page background color here | تغيير لون خلفية الصفحة هنا */
+    background-color: #568193;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    /* Change card background color here | تغيير لون خلفية الكارت هنا */
+    background-color: #0E4C65;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
+    /* Change text color here | تغيير لون النص هنا */
+    color: white;
+    position: absolute;
+}
+
+.register-container {
+    background-color: #0E4C65;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
+    color: white;
+    position: absolute;
+    display: none;
+}
+
+.animate {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.hide-down {
+    transform: translateY(100px) scale(0.9);
+    opacity: 0;
+}
+
+.hide-up {
+    transform: translateY(-100px) scale(0.9);
+    opacity: 0;
+}
+
+.input-group {
+    margin: 20px 0;
+    text-align: left; /* Changed from right to left for LTR */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px 12px 12px 40px; /* Reversed padding for LTR */
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 8px 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px; /* Changed from left to right for LTR */
+    left: auto; /* Added for LTR */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    font-size: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password:focus {
+    outline: none;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    /* Change button color here | تغيير لون الزر هنا */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Change button hover color here | تغيير لون الزر عند التحويم هنا */
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.register-link {
+    margin-top: 15px;
+    color: #ddd;
+}
+
+.register-link a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: left; /* Changed from right to left for LTR */
+    color: red;
+    display: none;
+}
+
+.input-error {
+    border-color: red !important;
+}
+
+@media (max-width: 480px) {
+    .login-container, .register-container {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    input {
+        padding: 10px 10px 10px 36px; /* Reversed padding for LTR */
+        font-size: 14px;
+    }
+    
+    .toggle-password {
+        right: 8px; /* Changed from left to right for LTR */
+        left: auto; /* Added for LTR */
+        font-size: 18px;
+    }
+}
